@@ -1,0 +1,11 @@
+<h1>List of articles</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li><%= link_to article.title, article_path(article)%>
+    <br><%= article.content[0, 20]%>...</li>
+  <% end %>
+</ul>
+
+<i class="fa-light fa-square-pen fa-bounce fa-lg" style="color: #63E6BE;"></i>
+<%= link_to "New article", new_article_path%>
